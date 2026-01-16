@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ana.Lytics</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="./resumenHistorico.html">Resumen histórico</a></li>
+            <li><a href="./evolucionFinanciera.html">Evolución Financiera</a></li>
+            <li><a href="./metas.html">Metas</a></li>
+            <li><a href="./simulador.html">Simulador</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Simulador</h2>
+
+
+        <label for="sueldo">Sueldo total:</label>
+        <input type="number" id="sueldo" placeholder="Ej: 800000">
+
+        <section id="contenedorDona">
+            <div id="dona">
+                <div class="segment"></div>
+            </div>
+
+            <div class="categorias">
+                <ul>
+                    <li>Gastos fijos</li>
+                    <li>Transporte</li>
+                    <li>Medicinas</li>
+                    <li>Gustos</li>
+                    <li>Inversiones</li>
+                    <li>Ahorros</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="analisis">
+            <h3>Según tu sueldo, estas son las recomendaciones</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem quasi sunt officiis quidem saepe placeat
+                cum error id eligendi vitae. Quo beatae voluptatem, ut quasi autem doloribus dolorem ratione at!</p>
+        </section>
+
+        <section id="perfilDeRiesgo">
+            <h2>Perfil de riesgo</h2>
+
+            <form>
+
+                <!-- Horizonte -->
+                <fieldset>
+                    <legend>Horizonte de inversión</legend>
+
+                    <label>
+                        <input type="radio" name="horizonte" value="1">
+                        Menos de 1 año
+                    </label>
+
+                    <label>
+                        <input type="radio" name="horizonte" value="2">
+                        Entre 1 y 3 años
+                    </label>
+
+                    <label>
+                        <input type="radio" name="horizonte" value="3">
+                        Más de 3 años
+                    </label>
+                </fieldset>
+
+                <!-- Reacción a pérdidas -->
+                <fieldset>
+                    <legend>Si tu inversión cae un 20%, ¿qué harías?</legend>
+
+                    <label>
+                        <input type="radio" name="perdida" value="1">
+                        Retiro el dinero
+                    </label>
+
+                    <label>
+                        <input type="radio" name="perdida" value="2">
+                        Espero a que se recupere
+                    </label>
+
+                    <label>
+                        <input type="radio" name="perdida" value="3">
+                        Invierto más
+                    </label>
+                </fieldset>
+
+                <!-- Objetivo -->
+                <fieldset>
+                    <legend>Objetivo principal</legend>
+
+                    <label>
+                        <input type="radio" name="objetivo" value="1">
+                        Proteger mi dinero
+                    </label>
+
+                    <label>
+                        <input type="radio" name="objetivo" value="2">
+                        Crecer de forma moderada
+                    </label>
+
+                    <label>
+                        <input type="radio" name="objetivo" value="3">
+                        Maximizar crecimiento
+                    </label>
+                </fieldset>
+
+                <!-- Ingresos -->
+                <fieldset>
+                    <legend>Estabilidad de ingresos</legend>
+
+                    <label>
+                        <input type="radio" name="ingresos" value="1">
+                        Ingresos variables
+                    </label>
+
+                    <label>
+                        <input type="radio" name="ingresos" value="2">
+                        Ingresos estables
+                    </label>
+
+                    <label>
+                        <input type="radio" name="ingresos" value="3">
+                        Muy estables
+                    </label>
+                </fieldset>
+
+                <!-- Experiencia -->
+                <fieldset>
+                    <legend>Experiencia en inversiones</legend>
+
+                    <label>
+                        <input type="radio" name="experiencia" value="1">
+                        Ninguna
+                    </label>
+
+                    <label>
+                        <input type="radio" name="experiencia" value="2">
+                        Básica
+                    </label>
+
+                    <label>
+                        <input type="radio" name="experiencia" value="3">
+                        Avanzada
+                    </label>
+                </fieldset>
+
+                <button type="submit">Evaluar perfil</button>
+
+            </form>
+
+            <div id="recomendacionesInv"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p> © Ana Lobo 2026</p>
+    </footer>
+</body>
+
+</html>

@@ -1,11 +1,163 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Ana.Lytics</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Dashboard</a></li>
+            <li><a href="./paginas/resumenHistorico.html">Resumen histórico</a></li>
+            <li><a href="./paginas/evolucionFinanciera.html">Evolución Financiera</a></li>
+            <li><a href="./paginas/metas.html">Metas</a></li>
+            <li><a href="./paginas/simulador.html">Simulador</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h2>Dashboard</h2>
+
+        <section id="contenedorDona">
+            <div id="dona">
+                <div class="segment"></div>
+            </div>
+
+            <div class="categorias">
+                <ul>
+                    <li>Gastos fijos</li>
+                    <li>Transporte</li>
+                    <li>Medicinas</li>
+                    <li>Gustos</li>
+                    <li>Inversiones</li>
+                    <li>Ahorros</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="clasificacion">
+            <h2>Resumen mensual</h2>
+
+            <label for="sueldo">Sueldo total:</label>
+            <input type="number" id="sueldo" placeholder="Ej: 800000">
+
+            <h3>Gastos fijos</h3>
+            <ul>
+                <li>
+                    Arriendo:
+                    <input type="number" placeholder="$">
+                </li>
+                <li>
+                    Internet:
+                    <input type="number" placeholder="$">
+                </li>
+                <li>
+                    Luz:
+                    <input type="number" placeholder="$">
+                </li>
+                <li>
+                    Agua:
+                    <input type="number" placeholder="$">
+                </li>
+                <li>
+                    Gas:
+                    <input type="number" placeholder="$">
+                </li>
+                <li>
+                    Celular:
+                    <input type="number" placeholder="$">
+                </li>
+                <li>
+                    Comida:
+                    <input type="number" placeholder="$">
+                </li>
+                <button class="agregar-subcategoria">
+                    Agregar subcategoría
+                </button>
+            </ul>
+
+            <h3>Transporte</h3>
+            <ul>
+                <li>
+                    Mensualidad:
+                    <input type="number" placeholder="$">
+                </li>
+                <li>
+                    Seguro:
+                    <input type="number" placeholder="$">
+                </li>
+                <li>
+                    Gasolina:
+                    <input type="number" placeholder="$">
+                </li>
+                <button class="agregar-subcategoria">
+                    Agregar subcategoría
+                </button>
+            </ul>
+
+            <h3>Medicinas</h3>
+            <ul>
+                <li>
+                    Farmacia:
+                    <input type="number" placeholder="$">
+                </li>
+                <button class="agregar-subcategoria">
+                    Agregar subcategoría
+                </button>
+            </ul>
+
+            <h3>Gustos</h3>
+            <ul>
+                <li>
+                    Ropa:
+                    <input type="number" placeholder="$">
+                </li>
+                <li>
+                    Salidas:
+                    <input type="number" placeholder="$">
+                </li>
+                <button class="agregar-subcategoria">
+                    Agregar subcategoría
+                </button>
+            </ul>
+
+            <h3>Inversiones</h3>
+            <ul>
+                <li>
+                    Fondos mutuos:
+                    <input type="number" placeholder="$">
+                </li>
+                <button class="agregar-subcategoria">
+                    Agregar subcategoría
+                </button>
+            </ul>
+
+            <h3>Ahorros</h3>
+            <ul>
+                <li>
+                    Depósito a plazo:
+                    <input type="number" placeholder="$">
+                </li>
+                <button class="agregar-subcategoria">
+                    Agregar subcategoría
+                </button>
+            </ul>
+            <button>Calcular gastos</button>
+        </section>
+        <button id="guardarYReiniciar" type="submit">Guardar y reiniciar mes</button>
+    </main>
+
+    <footer>
+        <p> © Ana Lobo 2026</p>
+    </footer>
 </body>
+
 </html>

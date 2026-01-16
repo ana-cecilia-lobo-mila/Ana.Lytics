@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ana.Lytics</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="./resumenHistorico.html">Resumen histórico</a></li>
+            <li><a href="./evolucionFinanciera.html">Evolución Financiera</a></li>
+            <li><a href="./metas.html">Metas</a></li>
+            <li><a href="./simulador.html">Simulador</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Metas financieras</h2>
+
+        <section class="metas">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Meta</th>
+                        <th>Categoría</th>
+                        <th>Costo total ($)</th>
+                        <th>Ahorro mensual ($)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="Ej: Auto">
+                        </td>
+                        <td>
+                            <select>
+                                <option value="">Seleccionar</option>
+                                <option value="transporte">Transporte</option>
+                                <option value="vivienda">Vivienda</option>
+                                <option value="tecnologia">Tecnología</option>
+                                <option value="ropa">Ropa</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" placeholder="$">
+                        </td>
+                        <td>
+                            <input type="number" placeholder="$">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button class="agregar-meta"> Agregar meta</button>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p> © Ana Lobo 2026</p>
+    </footer>
+</body>
+
+</html>
