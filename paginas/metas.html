@@ -5,19 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metas</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
+        <img src="../img/logo.png" alt="logo Ana.Lytics">
         <h1>Ana.Lytics</h1>
     </header>
 
     <nav>
         <ul>
             <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="./metas.html">Metas</a></li>
             <li><a href="./resumenHistorico.html">Resumen histórico</a></li>
             <li><a href="./evolucionFinanciera.html">Evolución Financiera</a></li>
-            <li><a href="./metas.html">Metas</a></li>
             <li><a href="./simulador.html">Simulador</a></li>
         </ul>
     </nav>
@@ -34,6 +41,8 @@
                         <th>Categoría</th>
                         <th>Costo total ($)</th>
                         <th>Ahorro mensual ($)</th>
+                        <th>Monto ahorrado (actual)</th>
+                        <th>Tiempo para obtenerlo</th>
                     </tr>
                 </thead>
 
@@ -58,18 +67,22 @@
                         <td>
                             <input type="number" placeholder="$">
                         </td>
+                        <td>
+                            <input type="number" placeholder="$">
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
 
             <button class="agregar-meta"> Agregar meta</button>
         </section>
-
-
     </main>
 
-    <footer>
-        <p> © Ana Lobo 2026</p>
+    <footer class="footer">
+        <p>© 2026 Ana Lobo · Proyecto personal</p>
     </footer>
 </body>
 

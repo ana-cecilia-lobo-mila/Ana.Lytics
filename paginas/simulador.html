@@ -5,43 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
+        <img src="../img/logo.png" alt="logo Ana.Lytics">
         <h1>Ana.Lytics</h1>
     </header>
 
     <nav>
         <ul>
             <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="./metas.html">Metas</a></li>
             <li><a href="./resumenHistorico.html">Resumen histórico</a></li>
             <li><a href="./evolucionFinanciera.html">Evolución Financiera</a></li>
-            <li><a href="./metas.html">Metas</a></li>
             <li><a href="./simulador.html">Simulador</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main id="simulador">
         <h2>Simulador</h2>
 
 
-        <label for="sueldo">Sueldo total:</label>
-        <input type="number" id="sueldo" placeholder="Ej: 800000">
-
+        <div class="title">
+            <label for="sueldo">Sueldo total:</label>
+            <input type="number" id="sueldo" placeholder="Ej: 800000">
+        </div>
         <section id="contenedorDona">
             <div id="dona">
                 <div class="segment"></div>
             </div>
 
             <div class="categorias">
-                <ul>
-                    <li>Gastos fijos</li>
-                    <li>Transporte</li>
-                    <li>Medicinas</li>
-                    <li>Gustos</li>
-                    <li>Inversiones</li>
-                    <li>Ahorros</li>
+                <ul class="leyenda">
+                    <li class="fijos">Gastos fijos</li>
+                    <li class="transporte">Transporte</li>
+                    <li class="medicinas">Medicinas</li>
+                    <li class="gustos">Gustos</li>
+                    <li class="inversiones">Inversiones</li>
+                    <li class="ahorros">Ahorros</li>
                 </ul>
             </div>
         </section>
@@ -166,8 +174,8 @@
 
     </main>
 
-    <footer>
-        <p> © Ana Lobo 2026</p>
+    <footer class="footer">
+        <p>© 2026 Ana Lobo · Proyecto personal</p>
     </footer>
 </body>
 
