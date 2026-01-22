@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link  rel="icon" href="./img/logo.png" type="image/png">
+    <link rel="icon" href="./img/logo.png" type="image/png">
 </head>
 
 <body>
@@ -28,36 +28,42 @@
             <li><a href="./paginas/resumenHistorico.html">Resumen histórico</a></li>
             <li><a href="./paginas/evolucionFinanciera.html">Evolución Financiera</a></li>
             <li><a href="./paginas/simulador.html">Simulador</a></li>
-            
+
         </ul>
     </nav>
 
     <main>
+        <div class="contenedor">
+            <section id="contenedorDona">
+                <div class="titulo">
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="cuerpo">
+                    <div id="dona">
+                        <div class="segment"></div>
+                    </div>
+                    <div class="categorias">
+                        <ul class="leyenda">
+                            <li class="fijos">Gastos fijos</li>
+                            <li class="transporte">Transporte</li>
+                            <li class="medicinas">Medicinas</li>
+                            <li class="gustos">Gustos</li>
+                            <li class="inversiones">Inversiones</li>
+                            <li class="ahorros">Ahorros</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-        <h2>Dashboard</h2>
-
-        <section id="contenedorDona">
-            <div id="dona">
-                <div class="segment"></div>
-            </div>
-
-            <div class="categorias">
-                <ul class="leyenda">
-                    <li class="fijos">Gastos fijos</li>
-                    <li class="transporte">Transporte</li>
-                    <li class="medicinas">Medicinas</li>
-                    <li class="gustos">Gustos</li>
-                    <li class="inversiones">Inversiones</li>
-                    <li class="ahorros">Ahorros</li>
-                </ul>
-            </div>
-        </section>
 
         <section id="clasificacion">
             <div class="title">
                 <h2>Resumen mensual</h2>
-                <label for="sueldo">Sueldo total:</label>
-                <input type="number" id="sueldo" placeholder="Ej: 800000">
+                <div class="sueldo">
+                    <label for="sueldo">Sueldo total:</label>
+                    <input type="number" id="sueldo" placeholder="Ej: 800000">
+                </div>
             </div>
 
             <div class="card">

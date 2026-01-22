@@ -1,0 +1,45 @@
+@use "../utils/mixin" as *;
+@use "../utils/maps" as *;
+@use "sass:map";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Títulos */
+h1 {
+    font-family: "Atma", system-ui;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3.5rem;
+    text-align: center;
+    color: map.get($colores-principales, titulo-uno);
+    padding: 1rem;
+}
+
+h2 {
+    padding: 1rem;
+    color: map.get($colores-principales, titulo-dos);
+    font-family: "Atma", system-ui;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    font-size: 3rem;
+}
+
+h3 {
+    padding: 1rem;
+    color: map.get($colores-principales, titulo-dos);
+}

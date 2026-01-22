@@ -1,0 +1,100 @@
+@use "../utils/mixin" as *;
+@use "../utils/maps" as *;
+@use "sass:map";
+
+/* Dona */
+#contenedorDona {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 55%;
+    margin: 0 auto 1rem auto;
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+
+    .titulo{
+        margin-bottom: 2rem;
+    }
+    .cuerpo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+}
+
+#dona {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(#4CAF50 0% 20%,
+            #2196F3 20% 35%,
+            #FFC107 35% 45%,
+            #E91E63 45% 65%,
+            #9C27B0 65% 85%,
+            #FF5722 85% 100%);
+    position: relative;
+}
+
+.segment {
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.leyenda {
+    list-style: none;
+    padding: 0;
+    margin-left: 3rem;
+
+    li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.4rem;
+        gap: 0.5rem;
+        font-size: 1.3rem;
+
+        &::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+.fijos::before {
+    background-color: #4CAF50;
+}
+
+.transporte::before {
+    background-color: #2196F3;
+}
+
+.medicinas::before {
+    background-color: #FFC107;
+}
+
+.gustos::before {
+    background-color: #E91E63;
+}
+
+.inversiones::before {
+    background-color: #9C27B0;
+}
+
+.ahorros::before {
+    background-color: #FF5722;
+}

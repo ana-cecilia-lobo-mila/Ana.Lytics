@@ -1,0 +1,89 @@
+@use "../utils/mixin" as *;
+@use "../utils/maps" as *;
+@use "sass:map";
+
+label {
+    margin: 1rem;
+    color: #555;
+}
+
+input {
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* ===== ANÁLISIS ===== */
+#analisis {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+    h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    p {
+        line-height: 1.6;
+        color: #555;
+    }
+}
+
+
+/* ===== PERFIL DE RIESGO ===== */
+#perfilDeRiesgo {
+    margin: 2rem auto;
+    width: 60%;
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+    h2 {
+        margin-bottom: 24px;
+        font-size: 1.6rem;
+    }
+
+    form {
+        display: grid;
+        gap: 20px;
+    }
+
+    fieldset {
+        border: 1px solid #ddd;
+        border-radius: 14px;
+        padding: 16px 20px;
+    }
+
+    legend {
+        font-weight: 600;
+        padding: 0 8px;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 0.95rem;
+    }
+}
+
+/* RADIO */
+#perfilDeRiesgo input[type="radio"] {
+    accent-color: #4CAF50;
+}
+
+/* RESULTADO */
+#recomendacionesInv {
+    margin-top: 24px;
+    padding: 18px;
+    border-radius: 12px;
+    background-color: #f4f6f8;
+    font-weight: 500;
+    display: none;
+    /* se mostrará con JS */
+}

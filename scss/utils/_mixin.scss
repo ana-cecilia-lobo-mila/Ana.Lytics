@@ -1,0 +1,13 @@
+//Para reutilizar fragmentos de estilos que puedan tener un resultado diferente en cada lugar donde los declaremos.
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-space-evenly {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

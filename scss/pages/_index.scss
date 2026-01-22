@@ -1,0 +1,75 @@
+/* Categorias */
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+                                                                     
+    background: -webkit-linear-gradient(156deg, #18848e,#ffffff);
+    background: linear-gradient(159deg, #18848e,#ffffff);                        
+    padding: 3rem 0;                                
+}
+
+
+#clasificacion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+
+    .title {
+    flex: 0 0 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    label {
+        margin: 1rem;
+        color: #555;
+    }
+
+    input {
+        padding: 0.5rem 0.8rem;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+}
+
+}
+
+
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1rem 3rem;
+    margin: 1rem 2rem;
+    box-shadow: 0 8px 20px rgba(24, 132, 142, 0.2);
+}
+
+.card__title {
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card__options {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+
+    p {
+        margin: 0;
+        flex: 1;
+        font-size: 1rem;
+    }
+
+    input {
+        width: 90px;
+        padding: 6px 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+}

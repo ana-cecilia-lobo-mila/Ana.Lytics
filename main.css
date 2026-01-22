@@ -1,0 +1,31 @@
+.journey {
+  position: relative;
+  padding: 8rem 2rem;
+  overflow: hidden;
+}
+
+.journey__block {
+  position: relative;
+  max-width: 420px;
+  margin-bottom: 18rem;
+  z-index: 1;
+}
+
+.journey__block.left {
+  margin-right: auto;
+}
+
+.journey__block.right {
+  margin-left: auto;
+}
+
+.journey__block h2 {
+  font-size: 2.8rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.journey__block p {
+  color: #555;
+  line-height: 1.6;
+}

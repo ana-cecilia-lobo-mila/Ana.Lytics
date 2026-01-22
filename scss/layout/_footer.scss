@@ -1,0 +1,17 @@
+@use "../utils/mixin" as *;
+@use "../utils/maps" as *;
+@use "sass:map";
+
+
+.footer {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    color: #6b7280;
+    background-color: #f8fafc;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 3rem;
+    p{
+        margin: 0;
+    }
+}

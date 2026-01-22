@@ -1,0 +1,24 @@
+//literal como un mapa, y puedo ir sacando valores de él
+
+$colores-categorias: (
+  gastos-fijos: #4CAF50,
+  transporte:   #2196F3,
+  medicinas:    #FFC107,
+  gustos:       #E91E63,
+  inversiones:  #9C27B0,
+  ahorros:      #FF5722
+);
+
+$colores-principales:(
+    titulo-uno: #1a98a6,
+    titulo-dos: #18848e,
+    //#136163,
+   // #1fbdd2,
+    //#53d1df
+);
+    
+$flex-center:(
+  display: flex,
+  justify-content: center,
+  align-items: center
+);

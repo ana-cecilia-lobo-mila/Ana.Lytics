@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "utils/mixin";
+@use "utils/maps";
+
+
+//Base
+@use "base/global";
+
+
+//Components
+@use "components/buttons";
+@use "components/dona";
+
+//Layout
+@use "layout/header";
+@use "layout/nav";
+@use "layout/footer";
+
+//pages
+@use "pages/index";
+@use "pages/metas";
+@use "pages/inversion";
+@use "pages/simulador";
+
+//sass --watch scss:css
+
+/* 
+@use "../utils/mixin" as *;
+@use "../utils/maps" as *;
+@use "sass:map";
+*/
+
+

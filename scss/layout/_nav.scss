@@ -1,0 +1,57 @@
+@use "../utils/mixin" as *;
+@use "../utils/maps" as *;
+@use "sass:map";
+
+nav {
+    padding: 1.5rem 0;
+    background-color: #fff;
+
+    ul {
+        @include flex-space-evenly;
+        gap: 7rem;
+
+        li {
+            list-style: none;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -3.5rem;
+                top: 25%;
+                height: 1.2rem;
+                width: 2px;
+                background-color: #1a98a6;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: #1a98a6;
+                font-size: 1.3rem;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #1a98a6;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+
+        }
+    }
+}
