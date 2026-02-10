@@ -1,9 +1,0 @@
-@use "../utils/mixin" as *;
-
-header {
-  @include flex-center;
-
-  img {
-        height: 5rem;
-    }
-}

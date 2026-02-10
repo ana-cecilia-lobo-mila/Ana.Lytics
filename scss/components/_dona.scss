@@ -1,100 +1,140 @@
 @use "../utils/mixin" as *;
+@use '../utils/functions' as *;
 @use "../utils/maps" as *;
 @use "sass:map";
 
-/* Dona */
-#contenedorDona {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.dona {
+  @include flex-center(column);
+  width: 55%;
+  margin: 0 space(md);
+  padding: space(md);
+  border-radius: 14px;
+  background-color: color(texto2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
-    width: 55%;
-    margin: 0 auto 1rem auto;
-    padding: 0 1rem 1rem 1rem;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+  &__title {
+    margin-bottom: space(md);
+  }
 
-    .titulo{
-        margin-bottom: 2rem;
-    }
-    .cuerpo {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 2rem;
-    }
-}
+  &__body {
+    @include flex-center(row);
+    gap: space(lg);
+    margin-bottom: space(lg);
+  }
 
-#dona {
-    width: 350px;
-    height: 350px;
+  &__chart {
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: conic-gradient(#4CAF50 0% 20%,
-            #2196F3 20% 35%,
-            #FFC107 35% 45%,
-            #E91E63 45% 65%,
-            #9C27B0 65% 85%,
-            #FF5722 85% 100%);
     position: relative;
-}
+    @include flex-center(row);
 
-.segment {
-    width: 220px;
-    height: 220px;
-    background-color: #fff;
+    background: conic-gradient(categoria(gastos-fijos) 0% 20%,
+        categoria(transporte) 20% 35%,
+        categoria(medicinas) 35% 45%,
+        categoria(gustos) 45% 65%,
+        categoria(ahorros) 65% 85%,
+        categoria(inversiones) 85% 100%);
+  }
+
+  &__hole {
+    width: 60%;
+    height: 60%;
+    background-color: color(texto2);
     border-radius: 50%;
-}
+  }
 
-.leyenda {
+  &__legend {
     list-style: none;
     padding: 0;
-    margin-left: 3rem;
 
     li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.4rem;
-        gap: 0.5rem;
-        font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: space(xs);
+      margin-bottom: space(sm);
+      font-size: size(md);
 
-        &::before {
-            content: "";
-            width: 12px;
-            height: 12px;
-            border-radius: 2px;
-            display: inline-block;
-        }
+      &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 3px;
+        display: inline-block;
+      }
     }
+  }
 }
 
-
-
-.fijos::before {
-    background-color: #4CAF50;
+@each $categoria, $color in $colores-categorias {
+  .dona__legend-item--#{$categoria}::before {
+    background-color: $color;
+  }
 }
 
-.transporte::before {
-    background-color: #2196F3;
+/*Media queries*/
+@media screen and (max-width: 992px) {
+  .dona {
+    &__title {
+      h2 {
+        font-size: 5vw;
+      }
+    }
+
+    &__legend {
+      li {
+        font-size: size(lg);
+      }
+    }
+  }
 }
 
-.medicinas::before {
-    background-color: #FFC107;
+@media screen and (max-width: 800px) {
+  .dona {
+    width: 85%;
+
+    &__title {
+      h2 {
+        font-size: 7vw;
+      }
+    }
+
+    &__chart {
+      width: 45vw;
+      height: 45vw;
+    }
+
+    &__legend {
+      li {
+        font-size: size(xl);
+      }
+    }
+  }
 }
 
-.gustos::before {
-    background-color: #E91E63;
-}
+@media screen and (max-width: 576px) {
+  .dona {
+    width: 80%;
 
-.inversiones::before {
-    background-color: #9C27B0;
-}
+    &__title {
+      h2 {
+        font-size: 10vw;
+      }
+    }
 
-.ahorros::before {
-    background-color: #FF5722;
+    &__body {
+      @include flex-center(column);
+    }
+
+    &__chart {
+      width: 65vw;
+      height: 65vw;
+    }
+
+    &__legend {
+      li {
+        font-size: size(xl);
+      }
+    }
+  }
 }

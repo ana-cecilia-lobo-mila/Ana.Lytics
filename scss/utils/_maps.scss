@@ -10,15 +10,51 @@ $colores-categorias: (
 );
 
 $colores-principales:(
-    titulo-uno: #1a98a6,
-    titulo-dos: #18848e,
-    //#136163,
-   // #1fbdd2,
-    //#53d1df
+    principal: #1a98a6,
+    secundario: #18848e,
+    danger: #e53935,
+    texto1: black,
+    texto2: white,
+    fondo: #f5f5f5,
+    dotted: #999,
 );
-    
-$flex-center:(
-  display: flex,
-  justify-content: center,
-  align-items: center
+
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
 );
+  /* 
+@media (max-width: map-get($breakpoints, md)) {
+  ...
+}*/
+
+$spacing: (
+  xs: 0.25rem,
+  sm: 0.5rem,
+  md: 1rem,
+  lg: 2rem,
+  lgg: 3.5rem,
+  xl: 4rem,
+  xxl: 5rem,
+  xxxl:8rem
+);
+
+$fonts: (
+  base: "DM Serif Text",
+  heading: "Atma",
+);
+
+$font-sizes: (
+
+  xs: 0.75rem,
+  sm: 0.875rem,
+  base: 1rem,
+  md: 1.1rem,
+  lg: 1.3rem,
+  xl: 1.5rem,
+  xxl: 1.7rem,
+  xxxl: 2rem
+);
+

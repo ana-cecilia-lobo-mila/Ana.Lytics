@@ -1,18 +1,12 @@
 @use "sass:map";
 @use "utils/mixin";
 @use "utils/maps";
-
+@use "utils/functions";
 
 //Base
 @use "base/global";
 
-
-//Components
-@use "components/buttons";
-@use "components/dona";
-
 //Layout
-@use "layout/header";
 @use "layout/nav";
 @use "layout/footer";
 
@@ -21,6 +15,10 @@
 @use "pages/metas";
 @use "pages/inversion";
 @use "pages/simulador";
+
+//Components
+@use "components/buttons";
+@use "components/dona";
 
 //sass --watch scss:css
 

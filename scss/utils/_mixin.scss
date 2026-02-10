@@ -1,13 +1,44 @@
-//Para reutilizar fragmentos de estilos que puedan tener un resultado diferente en cada lugar donde los declaremos.
-
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@mixin between($min, $max) {
+  @media (min-width: map-get($breakpoints, $min)) 
+    and (max-width: map-get($breakpoints, $max)) {
+    @content;
+  }
+}
+@mixin flex-center($dir: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $dir;
 }
 
-@mixin flex-space-evenly {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@mixin grid($cols, $gap: md) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: space($gap);
+}
+
+@mixin underline-hover(
+  $color,
+  $height: 2px,
+  $duration: 0.25s
+) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: $height;
+    background-color: $color;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform $duration ease-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }

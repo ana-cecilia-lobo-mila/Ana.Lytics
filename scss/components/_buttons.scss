@@ -1,100 +1,92 @@
 @use "../utils/mixin" as *;
+@use '../utils/functions' as *;
 @use "../utils/maps" as *;
 @use "sass:map";
 
-
-.eliminar-subcategoria {
-    background: transparent;
+.btn {
+    font-size: 1vw;
     border: none;
-    color: #e53935;
-    font-weight: bold;
     cursor: pointer;
-    padding: 4px 6px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    padding: space(sm) space(md);
+    border-radius: 10px;
+
+    &:hover {
+        background-color: color(secundario);
+        transform: translateY(-2px);
+    }
+}
+
+.eliminar__subcategoria {
+    background: transparent;
+    color: color(danger);
 
     &:hover {
         background: rgba(229, 57, 53, 0.1);
-        border-radius: 4px;
     }
 }
 
-
-.agregar-subcategoria {
-    width: 100%;
-    margin-top: 14px;
-    padding: 8px;
-    border: 1px dashed #999;
+.agregar__subcategoria {
+    border: 1px dashed color(dotted);
     background: transparent;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
-
-    &:hover{
-        background: #f5f5f5;
-    }
-}
-
-#guardarYReiniciar {
+    color: color(texto1);
     display: block;
-    margin: 1rem auto;
-    background-color: map.get($colores-principales, titulo-dos);
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    padding: 14px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition:
-        background-color 0.25s ease,
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: space(lg) auto;
 
     &:hover {
-        background-color: #1a98a6;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        background: color(fondo);
     }
 }
 
+.guardar__reiniciar {
+    display: block;
+    background-color: color(principal);
+    color: color(texto2);
+    margin: space(md) auto;
+}
 
 .agregar-meta {
-    margin-top: 20px;
-    padding: 10px 18px;
-    background-color: #18848e;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
+    background-color: color(principal);
+    color: color(texto2);
 }
 
-.agregar-meta:hover {
-    background-color: #43a047;
-}
-
-.agregar-meta:hover {
-    background-color: #1a98a6;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-/* BOTÓN */
 #perfilDeRiesgo button {
-    margin-top: 10px;
-    align-self: flex-start;
-    padding: 12px 22px;
-    background-color: #18848e;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 0.95rem;
-    cursor: pointer;
+    background-color: color(principal);
+    color: color(texto2);
 
-    &:hover {
-    background-color: #1a98a6;
-}
 }
 
 
+@media screen and (max-width: 1275px) {
+
+    .eliminar__subcategoria {
+        font-size: size(md);
+        padding: 0 space(xs);
+    }
+
+    .agregar__subcategoria {
+        font-size: size(base);
+        padding: space(md);
+    }
+
+    .guardar__reiniciar {
+        font-size: size(md);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .eliminar__subcategoria {
+        margin-left: space(md);
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .guardar__reiniciar {
+        font-size: size(lg);
+    }
+}

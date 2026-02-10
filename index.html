@@ -4,52 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard | AnaLytics</title>
 
     <link rel="stylesheet" href="./css/style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=DM+Serif+Text:ital@0;1&display=swap"
+        rel="stylesheet">
 
     <link rel="icon" href="./img/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
     <header>
-        <img src="./img/logo.png" alt="logo Ana.Lytics">
-        <h1>Ana.Lytics</h1>
+        <div class="header">
+            <img src="./img/logo.png" alt="logo Ana.Lytics">
+            <h1>Ana.Lytics</h1>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="lineas">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul>
+                <li><a href="./index.html">Dashboard</a></li>
+                <li><a href="./paginas/metas.html">Metas</a></li>
+                <li><a href="./paginas/resumenHistorico.html">Resumen histórico</a></li>
+                <li><a href="./paginas/evolucionFinanciera.html">Evolución Financiera</a></li>
+                <li><a href="./paginas/simulador.html">Simulador</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="./index.html">Dashboard</a></li>
-            <li><a href="./paginas/metas.html">Metas</a></li>
-            <li><a href="./paginas/resumenHistorico.html">Resumen histórico</a></li>
-            <li><a href="./paginas/evolucionFinanciera.html">Evolución Financiera</a></li>
-            <li><a href="./paginas/simulador.html">Simulador</a></li>
 
-        </ul>
-    </nav>
 
     <main>
         <div class="contenedor">
-            <section id="contenedorDona">
-                <div class="titulo">
+            <section class="dona">
+                <div class="dona__title">
                     <h2>Dashboard</h2>
                 </div>
-                <div class="cuerpo">
-                    <div id="dona">
-                        <div class="segment"></div>
+
+                <div class="dona__body">
+                    <div class="dona__chart">
+                        <div class="dona__hole"></div>
                     </div>
-                    <div class="categorias">
-                        <ul class="leyenda">
-                            <li class="fijos">Gastos fijos</li>
-                            <li class="transporte">Transporte</li>
-                            <li class="medicinas">Medicinas</li>
-                            <li class="gustos">Gustos</li>
-                            <li class="inversiones">Inversiones</li>
-                            <li class="ahorros">Ahorros</li>
+
+                    <div class="dona__categories">
+                        <ul class="dona__legend">
+                            <li class="dona__legend-item--gastos-fijos">Gastos fijos</li>
+                            <li class="dona__legend-item--transporte">Transporte</li>
+                            <li class="dona__legend-item--medicinas">Medicinas</li>
+                            <li class="dona__legend-item--gustos">Gustos</li>
+                            <li class="dona__legend-item--inversiones">Inversiones</li>
+                            <li class="dona__legend-item--ahorros">Ahorros</li>
                         </ul>
                     </div>
                 </div>
@@ -57,8 +74,8 @@
         </div>
 
 
-        <section id="clasificacion">
-            <div class="title">
+        <section class="clasificacion">
+            <div class="clasificacion__titulo">
                 <h2>Resumen mensual</h2>
                 <div class="sueldo">
                     <label for="sueldo">Sueldo total:</label>
@@ -71,39 +88,39 @@
                 <div class="card__options">
                     <p> Arriendo:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
                 <div class="card__options">
                     <p> Internet:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
                 <div class="card__options">
                     <p> Luz:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
                 <div class="card__options">
                     <p> Agua:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
                 <div class="card__options">
                     <p>Gas:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
                 <div class="card__options">
                     <p>Celular:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
                 <div class="card__options">
                     <p>Comida:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
-                <button class="agregar-subcategoria">Agregar subcategoría</button>
+                <button class="btn agregar__subcategoria">Agregar subcategoría</button>
             </div>
 
             <div class="card">
@@ -111,19 +128,19 @@
                 <div class="card__options">
                     <p>Mensualidad:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
                 <div class="card__options">
                     <p>Seguro:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
                 <div class="card__options">
                     <p>Gasolina:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
-                <button class="agregar-subcategoria">Agregar subcategoría</button>
+                <button class="btn agregar__subcategoria">Agregar subcategoría</button>
             </div>
 
             <div class="card">
@@ -131,9 +148,9 @@
                 <div class="card__options">
                     <p>Farmacia:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
-                <button class="agregar-subcategoria">Agregar subcategoría</button>
+                <button class="btn agregar__subcategoria">Agregar subcategoría</button>
             </div>
 
             <div class="card">
@@ -141,14 +158,14 @@
                 <div class="card__options">
                     <p>Ropa:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
                 <div class="card__options">
                     <p> Salidas:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
-                <button class="agregar-subcategoria">Agregar subcategoría</button>
+                <button class="btn agregar__subcategoria">Agregar subcategoría</button>
             </div>
 
             <div class="card">
@@ -156,9 +173,9 @@
                 <div class="card__options">
                     <p>Fondos mutuos:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
-                <button class="agregar-subcategoria">Agregar subcategoría</button>
+                <button class="btn agregar__subcategoria">Agregar subcategoría</button>
             </div>
 
             <div class="card">
@@ -166,12 +183,12 @@
                 <div class="card__options">
                     <p>Depósito a plazo:</p>
                     <input type="number" placeholder="$">
-                    <button class="eliminar-subcategoria">X</button>
+                    <button class="btn eliminar__subcategoria">X</button>
                 </div>
-                <button class="agregar-subcategoria">Agregar subcategoría</button>
+                <button class="btn agregar__subcategoria">Agregar subcategoría</button>
             </div>
         </section>
-        <button id="guardarYReiniciar" type="submit">Guardar y reiniciar mes</button>
+        <button class="btn guardar__reiniciar" type="submit">Guardar y reiniciar mes</button>
     </main>
 
     <footer class="footer">
