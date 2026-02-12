@@ -12,27 +12,21 @@
 }
 
 .inversion {
-    background: url("../img/fondo-pag-inversion.png") repeat-y;
-    background-size: contain;
-    position: relative;
-
     .left {
         margin-right: auto;
-        margin-left: space(xxxl);
+        margin-left: space(xxl);
     }
 
     .right {
-        margin-right: space(xxxl);
+        margin-right: space(xxl);
         margin-left: auto;
     }
 
     .inversion__seccion {
         position: relative;
-        margin-bottom: 250px;
-        padding-top: 50px;
-        z-index: 1;
+        margin-bottom: space(xl);
         @include flex-center(row-reverse);
-        
+
         .inversion__body {
             display: flex;
             flex-direction: column;
@@ -43,7 +37,7 @@
             margin-left: space(lgg);
 
             img {
-                height: 20rem;
+                height: 18rem;
             }
         }
 
@@ -51,7 +45,7 @@
             color: color(texto1);
             font-weight: 600;
             font-style: normal;
-            font-size: size(2xl);
+            font-size: size(xxl);
         }
 
 
@@ -140,7 +134,15 @@
 
 .slide__left {
     opacity: 0;
-    transform: translateX(-600px);
+    transform: translateX(-100%);
+    animation: slide-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.slide__right {
+    opacity: 0;
+    transform: translateX(100%);
     animation: slide-in linear forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
@@ -155,26 +157,86 @@
 }
 
 
-.slide__right {
-    opacity: 0;
-    transform: translateX(600px);
-    animation: slide-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
-
-@media screen and (max-width: 1100px) {
-    
-}
-
-@media screen and (max-width: 992px) {
-   
-}
 
 @media screen and (max-width: 800px) {
+    .inversion {
+        width: 70%;
+        align-content: center;
+        margin: 0 auto;
 
+        .right, .left{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .right {
+            flex-direction: column-reverse;
+        }
+
+        .left {
+            flex-direction: column;
+        }
+
+        .inversion__body{
+            margin: space(md);
+
+            h3{
+                text-align: center;
+                font-size: size(lgg);
+            }
+
+            p {
+                font-size: size(md);
+                text-align: center;
+            }
+        }
+        .image{
+            margin: space(md)
+        }
+    }
+
+
+    #info {
+    width: 85%;
+    padding: space(md);
+    grid-template-columns: 1fr; 
+    gap: 16px;
+  }
+
+  #info h3 {
+    grid-area: auto; 
+    text-align: center;
+    margin-bottom: space(md);
+  }
+
+  #info div {
+    padding: space(md);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+    #info ul li {
+    font-size: size(base);
+    padding: 8px;
+  }
+
+  #info ul li img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    
+    .inversion__titulo{
+        width:90%;
+        margin:0 auto;
+
+        p{
+            margin: space(md);
+        }
+    }
+    .inversion {
+        width: 85%;
+    }
+
 }

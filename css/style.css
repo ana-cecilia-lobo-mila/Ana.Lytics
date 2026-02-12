@@ -241,7 +241,7 @@ header nav #menu-toggle {
 @media screen and (max-width: 992px) {
   .footer {
     margin-top: 2rem;
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
   .footer p {
     font-size: 1.1rem;
@@ -488,24 +488,17 @@ header nav #menu-toggle {
   text-align: justify;
 }
 
-.inversion {
-  background: url("../img/fondo-pag-inversion.png") repeat-y;
-  background-size: contain;
-  position: relative;
-}
 .inversion .left {
   margin-right: auto;
-  margin-left: 8rem;
+  margin-left: 5rem;
 }
 .inversion .right {
-  margin-right: 8rem;
+  margin-right: 5rem;
   margin-left: auto;
 }
 .inversion .inversion__seccion {
   position: relative;
-  margin-bottom: 250px;
-  padding-top: 50px;
-  z-index: 1;
+  margin-bottom: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -520,12 +513,13 @@ header nav #menu-toggle {
   margin-left: 3.5rem;
 }
 .inversion .inversion__seccion .image img {
-  height: 20rem;
+  height: 18rem;
 }
 .inversion .inversion__seccion h3 {
   color: black;
   font-weight: 600;
   font-style: normal;
+  font-size: 1.7rem;
 }
 .inversion .inversion__seccion p {
   line-height: 1.6;
@@ -593,7 +587,15 @@ header nav #menu-toggle {
 
 .slide__left {
   opacity: 0;
-  transform: translateX(-600px);
+  transform: translateX(-100%);
+  animation: slide-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.slide__right {
+  opacity: 0;
+  transform: translateX(100%);
   animation: slide-in linear forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
@@ -605,14 +607,72 @@ header nav #menu-toggle {
     transform: translateX(0);
   }
 }
-.slide__right {
-  opacity: 0;
-  transform: translateX(600px);
-  animation: slide-in linear forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+@media screen and (max-width: 800px) {
+  .inversion {
+    width: 70%;
+    align-content: center;
+    margin: 0 auto;
+  }
+  .inversion .right, .inversion .left {
+    margin: 0;
+    padding: 0;
+  }
+  .inversion .right {
+    flex-direction: column-reverse;
+  }
+  .inversion .left {
+    flex-direction: column;
+  }
+  .inversion .inversion__body {
+    margin: 1rem;
+  }
+  .inversion .inversion__body h3 {
+    text-align: center;
+  }
+  .inversion .inversion__body p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .inversion .image {
+    margin: 1rem;
+  }
+  #info {
+    width: 85%;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  #info h3 {
+    grid-area: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  #info div {
+    padding: 1rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  #info ul li {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  #info ul li img {
+    width: 40px;
+    height: 40px;
+  }
 }
-
+@media screen and (max-width: 576px) {
+  .inversion__titulo {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .inversion__titulo p {
+    margin: 1rem;
+  }
+  .inversion {
+    width: 85%;
+  }
+}
 label {
   margin: 1rem;
   color: #555;
@@ -756,6 +816,7 @@ input {
   .agregar-meta {
     font-size: 1.1rem;
     margin-left: 0.5rem;
+    padding: 0.5rem;
   }
 }
 @media screen and (max-width: 1100px) {
