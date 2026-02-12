@@ -241,6 +241,7 @@ header nav #menu-toggle {
 @media screen and (max-width: 992px) {
   .footer {
     margin-top: 2rem;
+    padding: 1rem 0;
   }
   .footer p {
     font-size: 1.1rem;
@@ -434,6 +435,53 @@ header nav #menu-toggle {
   font-size: 0.9rem;
 }
 
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 4vw;
+  }
+  .metas {
+    width: 92%;
+  }
+}
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 6vw;
+  }
+  .metas table,
+  .metas thead,
+  .metas tbody,
+  .metas th,
+  .metas td,
+  .metas tr {
+    display: block;
+    width: 100%;
+  }
+  .metas thead {
+    display: none;
+  }
+  .metas tr {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+  .metas td {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .metas td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: black;
+  }
+}
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 9vw;
+  }
+}
 .inversion__titulo p {
   margin: 1rem 8rem 8rem 8rem;
   font-size: 1.3rem;
@@ -705,6 +753,10 @@ input {
   .guardar__reiniciar {
     font-size: 1.1rem;
   }
+  .agregar-meta {
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+  }
 }
 @media screen and (max-width: 1100px) {
   .eliminar__subcategoria {
@@ -714,6 +766,11 @@ input {
 @media screen and (max-width: 800px) {
   .guardar__reiniciar {
     font-size: 1.3rem;
+  }
+  .agregar-meta {
+    display: block;
+    font-size: 1.3rem;
+    margin: 2rem auto 0 auto;
   }
 }
 .dona {

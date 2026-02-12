@@ -22,20 +22,30 @@
 </head>
 
 <body>
-    <header>
-        <img src="../img/logo.png" alt="logo Ana.Lytics">
-        <h1>Ana.Lytics</h1>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Dashboard</a></li>
-            <li><a href="./metas.html">Metas</a></li>
-            <li><a href="./resumenHistorico.html">Resumen histórico</a></li>
-            <li><a href="./evolucionFinanciera.html">Evolución Financiera</a></li>
-            <li><a href="./simulador.html">Simulador</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="header">
+            <img src="../img/logo.png" alt="logo Ana.Lytics">
+            <h1>Ana.Lytics</h1>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="lineas">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul>
+                <li><a href="../index.html">Dashboard</a></li>
+                <li><a href="./metas.html">Metas</a></li>
+                <li><a href="./resumenHistorico.html">Resumen histórico</a></li>
+                <li><a href="./evolucionFinanciera.html">Evolución Financiera</a></li>
+                <li><a href="./simulador.html">Simulador</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <h2>Metas financieras</h2>
@@ -55,10 +65,10 @@
 
                 <tbody>
                     <tr>
-                        <td>
+                        <td data-label="Meta">
                             <input type="text" placeholder="Ej: Auto">
                         </td>
-                        <td>
+                        <td  data-label="Categoría">
                             <select>
                                 <option value="">Seleccionar</option>
                                 <option value="transporte">Transporte</option>
@@ -68,16 +78,16 @@
                                 <option value="otros">Otros</option>
                             </select>
                         </td>
-                        <td>
+                        <td data-label="Costo total ($)">
                             <input type="number" placeholder="$">
                         </td>
-                        <td>
+                        <td data-label="Ahorro mensual ($)">
                             <input type="number" placeholder="$">
                         </td>
-                        <td>
+                        <td  data-label="Monto ahorrado">
                             <input type="number" placeholder="$">
                         </td>
-                        <td>
+                        <td data-label="Tiempo para obtenerlo">
                             <div></div>
                         </td>
                     </tr>

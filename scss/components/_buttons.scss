@@ -73,6 +73,11 @@
     .guardar__reiniciar {
         font-size: size(md);
     }
+
+     .agregar-meta {
+        font-size: size(md);
+        margin-left: space(sm);
+    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -88,5 +93,11 @@
 
     .guardar__reiniciar {
         font-size: size(lg);
+    }
+
+    .agregar-meta {
+        display: block;
+        font-size: size(lg);
+        margin: space(lg) auto 0 auto;
     }
 }
