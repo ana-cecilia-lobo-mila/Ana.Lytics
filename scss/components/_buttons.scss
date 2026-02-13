@@ -74,10 +74,14 @@
         font-size: size(md);
     }
 
-     .agregar-meta {
+    .agregar-meta {
         font-size: size(md);
         margin-left: space(sm);
         padding: space(sm);
+    }
+
+    #perfilDeRiesgo button {
+        font-size: size(md);
     }
 }
 

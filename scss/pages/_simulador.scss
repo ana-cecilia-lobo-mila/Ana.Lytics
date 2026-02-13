@@ -1,28 +1,30 @@
 @use "../utils/mixin" as *;
+@use '../utils/functions' as *;
 @use "../utils/maps" as *;
 @use "sass:map";
 
 label {
-    margin: 1rem;
+    margin: space(md);
     color: #555;
 }
 
 input {
-    padding: 0.5rem 0.8rem;
+    padding: space(sm);
     border-radius: 8px;
     border: 1px solid #ccc;
 }
 
-/* ===== ANÁLISIS ===== */
+
 #analisis {
-    background-color: #ffffff;
-    padding: 28px;
+    margin: space(lg) auto;
+    width: 90%;
+    padding: space(lg);
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 
     h3 {
-        font-size: 1.3rem;
-        margin-bottom: 12px;
+        font-size: size(lg);
+        margin-bottom: space(md);
     }
 
     p {
@@ -31,18 +33,15 @@ input {
     }
 }
 
-
-/* ===== PERFIL DE RIESGO ===== */
 #perfilDeRiesgo {
-    margin: 2rem auto;
+    margin: space(lg) auto;
     width: 60%;
-    background-color: #ffffff;
-    padding: 32px;
+    padding: space(lg);
     border-radius: 18px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 
     h2 {
-        margin-bottom: 24px;
+        margin-bottom: space(md);
         font-size: 1.6rem;
     }
 
@@ -54,27 +53,26 @@ input {
     fieldset {
         border: 1px solid #ddd;
         border-radius: 14px;
-        padding: 16px 20px;
+        padding: space(md);
     }
 
     legend {
         font-weight: 600;
-        padding: 0 8px;
+        padding: 0 space(sm);
     }
 
     label {
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 10px;
         cursor: pointer;
-        font-size: 0.95rem;
+        font-size: size(base);
     }
 }
 
-/* RADIO */
+
 #perfilDeRiesgo input[type="radio"] {
-    accent-color: #4CAF50;
+    accent-color: color(principal);
 }
 
 /* RESULTADO */
@@ -88,18 +86,10 @@ input {
     /* se mostrará con JS */
 }
 
-@media screen and (max-width: 1100px) {
-    
-}
-
-@media screen and (max-width: 992px) {
-   
-}
-
-@media screen and (max-width: 800px) {
-
-}
-
 @media screen and (max-width: 576px) {
     
+#perfilDeRiesgo {
+    width: 80%;
+}
+
 }
